@@ -10,14 +10,13 @@ const App = () => {
     <div className='app'>
       <Navbar/>
       <Routes>
-
-<Route path='/' element={<Home/>}></Route>
+<Route path='/home' element={<Home/>}></Route>
 <Route path='/cart' element={<Cart/>}></Route>
 <Route path='/placeholder' element={<Placeorder/>}></Route>
       </Routes>
 
     </div>
   )
+  
 }
-
 export default App
