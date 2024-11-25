@@ -18,13 +18,28 @@ const Footer = () => {
 </div>
 
 <div className="footer-content-center">
+<h2>COMPANy</h2>
+<ul>
+    <li>Home</li>
+    <li>About us</li>
+    <li>Delivery</li>
+    <li>Privacy policy</li>
+</ul>
 
 </div>
 
-<div className="footer-content-right"></div>
+<div className="footer-content-right">
+    <h2>GET IN TOUCH</h2>
+    <ul>
+        <li>+7983458418</li>
+        <li>deepumelkani123@gmail.com</li>
+    </ul>
+</div>
 
 </div>
 
+<hr></hr>
+<p className="footer-copyright">Copyright 2034 Tomato.com - All right Reserved.</p>
       
     </div>
   )
