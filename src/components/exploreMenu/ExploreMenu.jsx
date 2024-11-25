@@ -10,8 +10,9 @@ const ExploreMenu = ({category,setCategory}) => {
 <p className='explore-menu-test'>Choose from a diverse menu featuring a delectable array of dishes. our mission is to satisfy your craving and elevate your dining experiences,one delicious meal at a time.</p>
 <div className="explore-menu-list">
     {menu_list.map((item,index)=>{
-        return (              
-            <div onClick={()=>{setCategory(prev=>prev===item.menu_item?"All":item.menu_name)}} key={index} className='explore-menu-list-item'>
+        return (      
+          //jis menu item pa click kariga category m uski valuee jayagi        
+            <div onClick={()=>{setCategory(prev=>prev===item.menu_name?"All":item.menu_name)}} key={index} className='explore-menu-list-item'>
                 <img className={category===item.menu_name?"active":""} src={item.menu_image}></img>
                 <p>{item.menu_name}</p>
                 </div>

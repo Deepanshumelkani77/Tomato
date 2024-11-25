@@ -16,6 +16,7 @@ const {cartItem,addToCart,removeFromCart}=useContext(StoreContext)
 <div className="food-item-img-container">
     <img className='food-item-image'  src={image} alt="" />
     {
+      //this is for how many time item  add  in a cart
         !cartItem[id] //thats mean if itemcounter ==0
         ?<img className='add' onClick={()=>addToCart(id)} src={assets.add_icon_white} alt></img>
         :<div className='food-item-counter'>   
