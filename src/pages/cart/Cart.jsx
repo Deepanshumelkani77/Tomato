@@ -1,10 +1,43 @@
-import React from 'react'
+
+import React, { useContext } from 'react'
 import './Cart.css'
+import { StoreContext } from '../../context/StoreContext'
+
 
 const Cart = () => {
+const {cartItem,food_list,removeFromCart}=useContext(StoreContext)
+
   return (
-    <div>
+    <div className='cart'>
       
+<div className="cart-items">
+
+<div className="cart-items-tittle">
+  <p>Items</p>
+  <p>Tittle</p>
+  <p>Price</p>
+  <p>Quantity</p>
+  <p>Total</p>
+  <p>Remove</p>
+</div>
+
+<br></br>
+<hr></hr>
+
+{food_list.map((item,index)=>{
+if(cartItem[item._id]>0)
+{
+  return (
+    <div className="cart-items-tittle cart-items-item">
+      <p>{item.name}</p>
+    </div>
+  )
+}
+
+})}
+
+</div>
+
     </div>
   )
 }

@@ -13,7 +13,8 @@ const StoreContextProvider=(props)=>{
     const [cartItem,setCartItem]=useState({});
 
     const addToCart=(itemId)=>{
-    if(!cartItem[itemId]){
+        //if user enter first time in cart
+    if(!cartItem[itemId]){//iska matlv agar vo khali h to
         setCartItem((prev)=>({...prev,[itemId]:1}))
     }
     else{
