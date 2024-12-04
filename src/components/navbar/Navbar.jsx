@@ -5,7 +5,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 
-const Navbar = () => {
+const Navbar = ({setShowLogin}) => {
 
 const [menu,setMenu]=useState("home");
 
@@ -30,7 +30,7 @@ const [menu,setMenu]=useState("home");
             </div>
         </div>
 
-<button>sign in</button>
+<button onClick={()=>setShowLogin(true)}>sign in</button>
 
       </div>
 
