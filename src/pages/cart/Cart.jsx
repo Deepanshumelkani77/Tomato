@@ -30,7 +30,12 @@ if(cartItem[item._id]>0)
 {
   return (
     <div className="cart-items-tittle cart-items-item">
+      <img src={item.image} alt="" />
       <p>{item.name}</p>
+      <p>{item.price}</p>
+      <p>{cartItem[item._id]}</p>
+      <p>{item.price*cartItem[item._id]}</p>
+      <p>X</p>
     </div>
   )
 }
