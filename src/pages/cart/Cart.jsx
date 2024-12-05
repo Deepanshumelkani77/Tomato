@@ -33,10 +33,10 @@ if(cartItem[item._id]>0)
     <div className="cart-items-tittle cart-items-item">
       <img src={item.image} alt="" />
       <p>{item.name}</p>
-      <p>{item.price}</p>
+      <p>${item.price}</p>
       <p>{cartItem[item._id]}</p>
-      <p>{item.price*cartItem[item._id]}</p>
-      <p className='cross'>X</p>
+      <p>${item.price*cartItem[item._id]}</p>
+      <p className='cross' onClick={()=>{removeFromCart(item._id)}}>X</p>
     </div>
     <hr />
     </>
@@ -46,6 +46,36 @@ if(cartItem[item._id]>0)
 })}
 
 </div>
+
+
+<div className="cart-bottom">
+
+<div className="cart-total">
+  <h2>Cart Totals</h2>
+  <div>
+    <div className="cart-total-details">
+      <p>Subtotal</p>
+      <p>{0}</p>
+    </div>
+    <hr />
+     <div className="cart-total-details">
+      <p>Delivery Fee</p>
+      <p>{2}</p>
+     </div>
+     <hr />
+    <div className="cart-total-details">
+      <p>Total</p>
+      <p>{0}</p>
+    </div>
+</div>
+
+<button>PROCEED THE CHECKOUT</button>
+
+</div>
+
+</div>
+
+
 
     </div>
   )
