@@ -15,16 +15,16 @@ const StoreContextProvider=(props)=>{
     const addToCart=(itemId)=>{
         //if user enter first time in cart
     if(!cartItem[itemId]){//iska matlv agar vo khali h to
-        setCartItem((prev)=>({...prev,[itemId]:1}))
+        setCartItem((prev)=>({...prev,[itemId]:1}))  // cartItem = { 1: 1 }.
     }
     else{
-        setCartItem((prev)=>({...prev,[itemId]:prev[itemId]+1}))
+        setCartItem((prev)=>({...prev,[itemId]:prev[itemId]+1}))  // cartItem = { 1: 2 }.
     }
     
     }
     
     const removeFromCart=(itemId)=>{
-        setCartItem((prev)=>({...prev,[itemId]:prev[itemId]-1}))
+        setCartItem((prev)=>({...prev,[itemId]:prev[itemId]-1})) //cartItem = { 1: 1 }.
     }
 
     useEffect(()=>{

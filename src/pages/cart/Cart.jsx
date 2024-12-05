@@ -25,6 +25,7 @@ const {cartItem,food_list,removeFromCart}=useContext(StoreContext)
 <hr></hr>
 
 {food_list.map((item,index)=>{
+  //iska matlv h cartItem obj m jo 1:"" value agar 0 sa badi h to uska name print kar do
 if(cartItem[item._id]>0)
 {
   return (
