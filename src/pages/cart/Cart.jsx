@@ -62,12 +62,12 @@ const navigate=useNavigate();
             <hr />
             <div className="cart-total-details">
               <p>Delivery Fee</p>
-              <p>${2}</p>
+              <p>${getTotalCartAmmount()===0?0:2}</p>
             </div>
             <hr />
             <div className="cart-total-details">
               <p>Total</p>
-              <p>${getTotalCartAmmount() + 2}</p>
+              <p>${getTotalCartAmmount()===0?0:getTotalCartAmmount() + 2}</p>
             </div>
           </div>
 
