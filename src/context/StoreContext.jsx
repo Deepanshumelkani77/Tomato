@@ -29,14 +29,15 @@ const StoreContextProvider=(props)=>{
 
     const getTotalCartAmmount=()=>{
         let totalAmmount=0;
+        //loop chalaga cartItem obj ki length tak for example if we push id 1 od or 4 food loop 1 sa 4 tak chalaga {1:1,2:0,3:0,4:1}
         for(const item in cartItem)
         {
-            if(cartItem[item]>0)
+            if(cartItem[item]>0)//if ya condition true hogi to food_list m us food ko search karinga jiski id same h
             {
-                let itemInfo=food_list.find((product)=>
+                let itemInfo=food_list.find((product)=> 
                     product._id === item)
                     console.log(itemInfo);
-    totalAmmount+=itemInfo.price*cartItem[item];
+    totalAmmount+=itemInfo.price*cartItem[item]; //food price multiply with quantity
             }
           
             }
