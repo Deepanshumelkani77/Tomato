@@ -35,3 +35,14 @@ justify-content: space-between;
 .multi-fields input{
     width:45%;
 }
+
+.place-order-right{
+    margin-top: 15px;
+    width:100%;
+    max-width:max(40%,500px);
+
+}
+.place-order .cart-total button{
+    margin-top: 30px;
+
+}
